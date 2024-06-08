@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ouranosaurus</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <img src="logo-jurasica-500.png" alt="Dinosaur Icon">
+    <h1>Ouranosaurus</h1>
+</header>
+<nav>
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+</nav>
+<main>
+    <div class="image-container">
+        <img src="1.jpg" alt="Ouranosaurus 1 Icon" >
+        <img src="2.png" alt="Ouranosaurus 2 Icon" >
+        <img src="3.jpeg" alt="Ouranosaurus 3 Icon" >
+        <img src="4.jpg" alt="Ouranosaurus 4 Icon" >
+    </div>
+    <h2>Română</h2>
+    <button class="button" id="play-romana">
+        <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px">
+            <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="#036307"></path>
+        </svg>
+    </button>
+    <p id="romana-text">Ouranosaurus, numit de Philippe Taquet în 1976, este un dinozaur din stadiile Aptian până la Cenomanian din perioada Cretacic.  Fosilele sale au fost găsite în regiunea Echkar din Niger, Africa, cu specimene suplimentare descoperite în locații învecinate.
+
+        Clasificată în Chordata, Reptilia, Dinosauria, Ornithischia, Ornithopoda, Styracosterna și Hadrosauriformes, singura specie recunoscută este O. nigeriensis.  Ouranosaurus era un erbivor, contrar clasificării inițiale ca carnivor, măsurând 7 până la 8 metri lungime și un craniu lung de 67 de centimetri.
+
+        Au fost găsite două exemplare aproape complete, oferind perspective detaliate asupra anatomiei sale.  Ouranosaurus este remarcabil pentru structura sa asemănătoare pânzei pe spate, susținută de coloane neuronale alungite, care ar fi putut fi folosite pentru termoreglare sau afișare.</p>
+
+    <h2>English</h2>
+    <button class="button" id="play-engleza">
+        <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px">
+            <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="#036307"></path>
+        </svg>
+    </button>
+    <p id="engleza-text">Ouranosaurus, named by Philippe Taquet in 1976, is a dinosaur from the Aptian to Cenomanian stages of the Cretaceous period. Its fossils have been found in the Echkar region of Niger, Africa, with additional specimens discovered in neighboring locations.
+
+        Classified under Chordata, Reptilia, Dinosauria, Ornithischia, Ornithopoda, Styracosterna, and Hadrosauriformes, the only recognized species is O. nigeriensis. Ouranosaurus was an herbivore, contrary to the initial classification as a carnivore, measuring 7 to 8 meters in length with a 67-centimeter-long skull.
+
+        Two almost complete specimens have been found, providing detailed insights into its anatomy. Ouranosaurus is notable for its sail-like structure on its back, supported by elongated neural spines, which might have been used for thermoregulation or display.</p><br>
+</main>
+<footer>
+    <script>
+        const romanaAudio = new Audio('Ouranosaurus_romana_voice.mp3');
+        const englezaAudio = new Audio('Ouranosaurus_engleza_voice.mp3');
+
+        const playRomana = document.getElementById('play-romana');
+        const romanaText = document.getElementById('romana-text');
+        const playEngleza = document.getElementById('play-engleza');
+        const englezaText = document.getElementById('engleza-text');
+
+        playRomana.addEventListener('click', () => {
+            if (romanaAudio.paused) {
+                romanaAudio.play();
+                playRomana.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg>';
+            } else {
+                romanaAudio.pause();
+                playRomana.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg> Pause';
+            }
+        });
+
+        playEngleza.addEventListener('click', () => {
+            if (englezaAudio.paused) {
+                englezaAudio.play();
+                playEngleza.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg>';
+            } else {
+                englezaAudio.pause();
+                playEngleza.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg> Pause';
+            }
+        });
+    </script>
+    &copy; 2024 Jurasica Adventure Park. All rights reserved.
+</footer>
+
+</body>
+</html>
